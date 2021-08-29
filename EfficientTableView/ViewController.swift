@@ -66,7 +66,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameCell", for: indexPath)
         let dictionary = self.dataSource[(indexPath as NSIndexPath).row] as! [String:AnyObject]
         cell.textLabel!.text = dictionary["trackName"] as? String
-        cell.imageView?.image = #imageLiteral(resourceName: "placeholder")
+        cell.imageView?.image = #imageLiteral(resourceName: "indicator")
 
         if (cache.object(forKey: (indexPath as NSIndexPath).row as AnyObject) != nil) {
             /// 해당 row에 해당되는 부분이 캐시에 존재하는 경우
